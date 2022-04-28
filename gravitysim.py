@@ -38,6 +38,7 @@ class Body(_StarDefaultsBase):
         self.orbit = []
         self.x = x
         self.y = y
+        self.original_radius = radius
         self.radius = radius
         self.colour = colour
         self.mass = mass
@@ -145,7 +146,7 @@ class Game:
                     self.cam_pos[0] = self.cam_pos[0]*1.2
                     self.cam_pos[1] = self.cam_pos[1]*1.2
                     for body in self.bodies:
-                        body.radius*=1.2
+                        body.radius *= 1.2
                 if pygame.key.get_pressed()[pygame.K_x]:
                     self.scale /= 1.2
                     self.cam_pos[0] /= 1.2
@@ -173,7 +174,7 @@ class Game:
                         self.cam_pos = [0, 0]
                         self.scale = 250 / Body.AU
                         for body in self.bodies:
-                            pass
+                            body.radius = body.original_radius
                     if event.key == pygame.K_a:
                         for i in self.bodies:
                             i.G *= 2
