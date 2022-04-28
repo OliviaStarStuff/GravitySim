@@ -1,6 +1,5 @@
 import math
 import pygame
-from collections import deque
 
 WIDTH, HEIGHT = 800, 800
 SIZE_SCALE = 10e9/149597e6
