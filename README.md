@@ -1,5 +1,6 @@
 # GravitySim
 An N body simulation of the solar system
+requires pygame and the built-in library, math.
 
 Coded this is a relatively short period of time following a tutorial to understand how to adapt the gravitational equation to cartesian coordiantes.
 
